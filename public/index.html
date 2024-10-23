@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Usuarios</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    #formulario {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lista de Usuarios desde JSON</h1>
+
+  <!-- Tabla donde se mostrarán los datos -->
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Ciudad</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-usuarios">
+      <!-- Aquí se agregarán dinámicamente los usuarios -->
+    </tbody>
+  </table>
+
+  <!-- Formulario para agregar nuevo usuario -->
+  <div id="formulario">
+    <h2>Agregar nuevo usuario</h2>
+    <form id="form-usuario">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" name="edad" required><br><br>
+      <label for="ciudad">Ciudad:</label>
+      <input type="text" id="ciudad" name="ciudad" required><br><br>
+      <button type="button" onclick="agregarUsuario()">Agregar</button>
+      <button type="button" onclick="limpiarFormulario()">Limpiar</button>
+    </form>
+    <br>
+    <button type="button" onclick="anteriorUsuario()">Anterior</button>
+    <button type="button" onclick="siguienteUsuario()">Siguiente</button>
+    <button type="button" onclick="nuevoUsuario()">Nuevo</button>
+  </div>
+
+  <!-- Conectar el archivo JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
